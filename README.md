@@ -34,7 +34,7 @@
 
 Ƭ **AccessObject**: *object*
 
-*Defined in [index.ts:100](https://github.com/rhdeck/gql-client-core/blob/c3f9a68/src/index.ts#L100)*
+*Defined in [index.ts:100](https://github.com/rhdeck/gql-client-core/blob/91bb3e2/src/index.ts#L100)*
 
 **`internal`** 
 
@@ -56,7 +56,7 @@ ___
 
 Ƭ **Await**: *T extends object ? U : T*
 
-*Defined in [index.ts:10](https://github.com/rhdeck/gql-client-core/blob/c3f9a68/src/index.ts#L10)*
+*Defined in [index.ts:10](https://github.com/rhdeck/gql-client-core/blob/91bb3e2/src/index.ts#L10)*
 
 **`internal`** 
 
@@ -66,7 +66,7 @@ ___
 
 • **cachedToken**: *string | [AccessObject](#accessobject)* = ""
 
-*Defined in [index.ts:108](https://github.com/rhdeck/gql-client-core/blob/c3f9a68/src/index.ts#L108)*
+*Defined in [index.ts:108](https://github.com/rhdeck/gql-client-core/blob/91bb3e2/src/index.ts#L108)*
 
 **`internal`** 
 
@@ -76,7 +76,7 @@ ___
 
 • **client**: *ReturnType‹typeof makeAppSyncClient› | undefined*
 
-*Defined in [index.ts:110](https://github.com/rhdeck/gql-client-core/blob/c3f9a68/src/index.ts#L110)*
+*Defined in [index.ts:110](https://github.com/rhdeck/gql-client-core/blob/91bb3e2/src/index.ts#L110)*
 
 **`internal`** 
 
@@ -86,7 +86,7 @@ ___
 
 ▸ **getAccessToken**(`__namedParameters`: object): *Promise‹object›*
 
-*Defined in [index.ts:16](https://github.com/rhdeck/gql-client-core/blob/c3f9a68/src/index.ts#L16)*
+*Defined in [index.ts:16](https://github.com/rhdeck/gql-client-core/blob/91bb3e2/src/index.ts#L16)*
 
 **`internal`** 
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **init**(`token`: string | [AccessObject](#accessobject) | undefined): *Promise‹ApolloClient‹NormalizedCacheObject››*
 
-*Defined in [index.ts:115](https://github.com/rhdeck/gql-client-core/blob/c3f9a68/src/index.ts#L115)*
+*Defined in [index.ts:115](https://github.com/rhdeck/gql-client-core/blob/91bb3e2/src/index.ts#L115)*
 
 Account relationship
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **makeAppSyncClient**(`__namedParameters`: object): *ApolloClient‹NormalizedCacheObject›*
 
-*Defined in [index.ts:50](https://github.com/rhdeck/gql-client-core/blob/c3f9a68/src/index.ts#L50)*
+*Defined in [index.ts:50](https://github.com/rhdeck/gql-client-core/blob/91bb3e2/src/index.ts#L50)*
 
 **`internal`** 
 
@@ -149,7 +149,7 @@ ___
 
 ▸ **makeToken**(`__namedParameters`: object): *Promise‹object›*
 
-*Defined in [index.ts:83](https://github.com/rhdeck/gql-client-core/blob/c3f9a68/src/index.ts#L83)*
+*Defined in [index.ts:83](https://github.com/rhdeck/gql-client-core/blob/91bb3e2/src/index.ts#L83)*
 
 **`internal`** 
 
