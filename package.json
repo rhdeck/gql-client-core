@@ -1,45 +1,44 @@
 {
-  "name": "template",
-  "private": true,
+  "name": "@raydeck/gql-client-core",
+  "private": false,
   "version": "1.0.2",
   "description": "",
   "main": "lib/index.js",
-  "bin": "lib/bin.js",
   "scripts": {
     "setup": "./init-template.js",
     "pre-commit": "(git-branch-is --not main || (set -u && echo $ALLOWMAIN)) && yarn test",
     "test": "tsc --noEmit",
-    "build": "tsc && chmod +x lib/bin.js && yarn pack package.tgz",
-    "docs:bin": "mkdir docstemp ; (commanderdoc markdown lib/bin.js -o docstemp/__cli.md --cli-name \"npx `jq -r .name package.json`\") ; ",
-    "docs:lib": "typedoc --theme markdown --readme none --mode file --excludeNotExported --includeVersion --out docstemp  && rm README.md ; mv docstemp/README.md docstemp/_library.md",
+    "build": "tsc && yarn pack -f package.tgz",
+    "docs:lib": "typedoc --theme markdown --readme none --mode file  --includeVersion --out docstemp  && rm README.md ; mv docstemp/README.md docstemp/_library.md",
     "docs:compile": "mkdir docstemp ; cp TOP.md docstemp/README.md ; concat-md docstemp > README.md && rm -rf docstemp",
-    "docs": "rm -rf docstemp && yarn docs:lib && yarn docs:bin && yarn docs:compile",
+    "docs": "rm -rf docstemp && yarn docs:lib && yarn docs:compile",
     "prepublishOnly": "yarn build && yarn docs && git commit README.md -m \"docs: updating docs\" && git push",
     "watch": "livelink watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhdeck/base.git"
+    "url": "https://github.com/rhdeck/gql-client-core.git"
   },
   "author": "Ray Deck",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rhdeck/base/issues"
+    "url": "https:/github.com/rhdeck/gql-client-core/issues"
   },
-  "homepage": "https://github.com/rhdeck/base#readme",
+  "homepage": "https://github.com/rhdeck/gql-client-core#README",
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "@raydeck/livelink": "^1.5.2",
     "@types/inquirer": "^7.3.1",
     "@types/node": "^14.0.27",
+    "@types/node-fetch": "^2.5.7",
     "@types/validate-npm-package-name": "^3.0.0",
     "commanderdoc": "^0.1.11",
     "concat-md": "^0.3.5",
     "git-branch-is": "^4.0.0",
     "husky": "^4.2.5",
     "typedoc": "^0.19.0",
-    "typedoc-plugin-markdown": "^2.4.0",
+    "typedoc-plugin-markdown": "^2.4.2",
     "typescript": "^4.0.2",
     "validate-npm-package-name": "^3.0.0"
   },
@@ -48,7 +47,15 @@
     "lib"
   ],
   "dependencies": {
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-http": "^1.5.17",
+    "aws-appsync-auth-link": "^2.0.2",
+    "aws-sdk": "^2.738.0",
     "commander": "^6.0.0",
+    "cross-fetch": "^3.0.5",
+    "graphql": "^15.3.0",
     "inquirer": "^7.3.3",
     "install-peers-cli": "^2.2.0"
   },
